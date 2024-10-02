@@ -1,0 +1,20 @@
+Microsoft Windows [Version 10.0.19045.4894]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+E:\Операционные системы\Практика 1> copy con surnames.txt
+Popov
+Aleksandrov
+Balikin
+Radichev
+Stremechev
+^Z
+Скопировано файлов:         1.
+
+E:\Операционные системы\Практика 1> sort surnames.txt > sorted_surnames.txt
+
+E:\Операционные системы\Практика 1> type sorted_surnames.txt
+Aleksandrov
+Balikin
+Popov
+Radichev
+Stremechev
