@@ -1,0 +1,1 @@
+Get-ChildItem -Path "C:\Windows" -Recurse -Include "*.bmp", "*.jpg" -File | Measure-Object -Property Length -Sum | Select-Object -ExpandProperty Sum

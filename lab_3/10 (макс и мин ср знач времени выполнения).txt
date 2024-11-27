@@ -1,0 +1,15 @@
+$times = @()
+
+for ($i = 0; $i -lt 10; $i++) {
+    $timeDir = (Measure-Command { dir }).TotalMilliseconds
+    $timePs = (Measure-Command { ps }).TotalMilliseconds
+    $times += $timeDir, $timePs
+}
+
+$maxTime = ($times | Measure-Object -Maximum).Maximum
+$minTime = ($times | Measure-Object -Minimum).Minimum
+$avgTime = ($times | Measure-Object -Average).Average
+
+Write-Output "Максимальное время выполнения: $maxTime мс"
+Write-Output "Минимальное время выполнения: $minTime мс"
+Write-Output "Среднее время выполнения: $avgTime мс"
